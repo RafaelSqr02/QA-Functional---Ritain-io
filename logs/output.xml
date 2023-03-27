@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230327 17:10:49.827" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Users\pc gamer\Desktop\QA Functional - Ritain io\tests\tests.robot">
+<test id="s1-t1" name="Cenário 01: Acessar o site Saucedemo" line="6">
+<kw name="Dado que entre no site Saucedemo" library="rsc">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230327 17:10:50.019" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20230327 17:10:50.019" level="INFO">Firefox driver log is always forced to to: C:\Users\pc gamer\Desktop\QA Functional - Ritain io\geckodriver-1.log</msg>
+<status status="PASS" starttime="20230327 17:10:50.018" endtime="20230327 17:10:55.415"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230327 17:10:55.416" endtime="20230327 17:10:55.684"/>
+</kw>
+<status status="PASS" starttime="20230327 17:10:50.018" endtime="20230327 17:10:55.685"/>
+</kw>
+<kw name="Quando eu inserir minhas credenciais" library="rsc">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230327 17:10:55.685" endtime="20230327 17:10:55.704"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SENHA}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230327 17:10:55.705" endtime="20230327 17:10:55.716"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230327 17:10:55.716" level="INFO">Typing text 'standard_user' into text field '//input[@id='user-name']'.</msg>
+<status status="PASS" starttime="20230327 17:10:55.716" endtime="20230327 17:10:55.753"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SENHA}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230327 17:10:55.753" level="INFO">Typing text 'secret_sauce' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20230327 17:10:55.753" endtime="20230327 17:10:55.774"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230327 17:10:58.782" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230327 17:10:55.774" endtime="20230327 17:10:58.782"/>
+</kw>
+<status status="PASS" starttime="20230327 17:10:55.685" endtime="20230327 17:10:58.782"/>
+</kw>
+<kw name="Então espero realizar o Login no sistema" library="rsc">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230327 17:10:58.783" level="INFO">Clicking element '//input[@id='login-button']'.</msg>
+<status status="PASS" starttime="20230327 17:10:58.783" endtime="20230327 17:10:59.026"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230327 17:11:02.035" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230327 17:10:59.027" endtime="20230327 17:11:02.035"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230327 17:11:02.036" level="WARN">Taking screenshot failed: Taking screenshots is not supported on this platform by default. See library documentation for details.
+Make sure tests are run with a physical or virtual display.</msg>
+<msg timestamp="20230327 17:11:02.037" level="INFO" html="true">&lt;a href="screenshot_1.jpg"&gt;&lt;img src="screenshot_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230327 17:11:02.035" endtime="20230327 17:11:02.037"/>
+</kw>
+<status status="PASS" starttime="20230327 17:10:58.782" endtime="20230327 17:11:02.037"/>
+</kw>
+<status status="PASS" starttime="20230327 17:10:50.016" endtime="20230327 17:11:02.037"/>
+</test>
+<test id="s1-t2" name="Cenário 02: Realizar a compra de um Produto" line="11">
+<kw name="Dado que eu esteja logado no sistema" library="rsc">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PRODUCT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230327 17:11:02.038" endtime="20230327 17:11:02.049"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230327 17:11:05.059" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230327 17:11:02.049" endtime="20230327 17:11:05.059"/>
+</kw>
+<status status="PASS" starttime="20230327 17:11:02.038" endtime="20230327 17:11:05.059"/>
+</kw>
+<kw name="E selecione um produto na tela Home" library="rsc">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PRODUCT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:05.060" level="INFO">Clicking element '//img[@alt='Sauce Labs Bike Light']'.</msg>
+<status status="PASS" starttime="20230327 17:11:05.059" endtime="20230327 17:11:05.280"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230327 17:11:07.293" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230327 17:11:05.280" endtime="20230327 17:11:07.293"/>
+</kw>
+<status status="PASS" starttime="20230327 17:11:05.059" endtime="20230327 17:11:07.293"/>
+</kw>
+<kw name="Quando eu ir para o carrinho" library="rsc">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BUTTONPRODUCT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230327 17:11:07.293" endtime="20230327 17:11:07.304"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230327 17:11:09.308" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230327 17:11:07.305" endtime="20230327 17:11:09.308"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTONPRODUCT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:09.308" level="INFO">Clicking element '//button[@id='add-to-cart-sauce-labs-bike-light']'.</msg>
+<status status="PASS" starttime="20230327 17:11:09.308" endtime="20230327 17:11:09.523"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CARRINHO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:09.524" level="INFO">Clicking element '//a[@class='shopping_cart_link']'.</msg>
+<status status="PASS" starttime="20230327 17:11:09.524" endtime="20230327 17:11:09.741"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CHECKOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:09.741" level="INFO">Clicking element '//button[@id='checkout']'.</msg>
+<status status="PASS" starttime="20230327 17:11:09.741" endtime="20230327 17:11:09.958"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FNAME}</arg>
+<arg>Rafael</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:09.959" level="INFO">Typing text 'Rafael' into text field '//input[@id='first-name']'.</msg>
+<status status="PASS" starttime="20230327 17:11:09.959" endtime="20230327 17:11:09.980"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LNAME}</arg>
+<arg>Siqueira</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:09.981" level="INFO">Typing text 'Siqueira' into text field '//input[@id='last-name']'.</msg>
+<status status="PASS" starttime="20230327 17:11:09.980" endtime="20230327 17:11:10.003"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${ZIP}</arg>
+<arg>24451230</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:10.003" level="INFO">Typing password into text field '//input[@id='postal-code']'.</msg>
+<msg timestamp="20230327 17:11:10.007" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230327 17:11:10.023" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230327 17:11:10.003" endtime="20230327 17:11:10.023"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTINUE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:10.024" level="INFO">Clicking element '//input[@id='continue']'.</msg>
+<status status="PASS" starttime="20230327 17:11:10.024" endtime="20230327 17:11:10.241"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230327 17:11:13.244" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230327 17:11:10.241" endtime="20230327 17:11:13.244"/>
+</kw>
+<status status="PASS" starttime="20230327 17:11:07.293" endtime="20230327 17:11:13.244"/>
+</kw>
+<kw name="Então devo fechar o pedido" library="rsc">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FINISH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230327 17:11:13.245" level="INFO">Clicking element '//button[@id='finish']'.</msg>
+<status status="PASS" starttime="20230327 17:11:13.245" endtime="20230327 17:11:13.464"/>
+</kw>
+<kw name="Take Screenshot" library="Screenshot">
+<doc>Takes a screenshot in JPEG format and embeds it into the log file.</doc>
+<msg timestamp="20230327 17:11:13.465" level="WARN">Taking screenshot failed: Taking screenshots is not supported on this platform by default. See library documentation for details.
+Make sure tests are run with a physical or virtual display.</msg>
+<msg timestamp="20230327 17:11:13.466" level="INFO" html="true">&lt;a href="screenshot_1.jpg"&gt;&lt;img src="screenshot_1.jpg" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230327 17:11:13.465" endtime="20230327 17:11:13.466"/>
+</kw>
+<status status="PASS" starttime="20230327 17:11:13.244" endtime="20230327 17:11:13.466"/>
+</kw>
+<status status="PASS" starttime="20230327 17:11:02.038" endtime="20230327 17:11:13.467"/>
+</test>
+<doc>QA Funcional</doc>
+<status status="PASS" starttime="20230327 17:10:49.829" endtime="20230327 17:11:13.467"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230327 17:11:02.036" level="WARN">Taking screenshot failed: Taking screenshots is not supported on this platform by default. See library documentation for details.
+Make sure tests are run with a physical or virtual display.</msg>
+<msg timestamp="20230327 17:11:13.465" level="WARN">Taking screenshot failed: Taking screenshots is not supported on this platform by default. See library documentation for details.
+Make sure tests are run with a physical or virtual display.</msg>
+</errors>
+</robot>
